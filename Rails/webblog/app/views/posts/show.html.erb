@@ -16,8 +16,10 @@
 <br><br>
 
 <h2>Comments</h2>
-<div id="comments">
-<%= render @post.comments %>
+    <div id="comments">
+        <%= render @post.comments %>
+    </div>
+
+    <%= render 'comments/new', post: @post %>
 </div>
-<%= render 'comments/new', post: @post %>
-</div>
+
