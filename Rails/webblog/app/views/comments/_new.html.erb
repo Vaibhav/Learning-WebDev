@@ -1,0 +1,5 @@
+<%= form_for([ @post, Comment.new], remote: true) do |form| %>
+    Enter a comment:
+    <%= form.text_arena :body, size: '50x25' %><br>
+    <%= form.submit %>
+<% end %>
