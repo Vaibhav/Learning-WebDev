@@ -2,16 +2,17 @@ class CommentsController < ApplicationController
   before_action :set_post
 
   def create
-    @post.comments.create! comments_params
+    comment = @post.comments.create! comment_params
+    CommentsChannel.broadcast(comment)
     redirect_to @post
   end
 
   private
     def set_post
-        @post = Post.find(params[:post_id])
+      @post = Post.find(params[:post_id])
     end
 
-    def comments_params
-        params.required(:comment).permit(:body)
+    def comment_params
+      params.require(:comment).permit(:body)
     end
 end
