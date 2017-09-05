@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class ProductTest < ActiveSupport::TestCase
+  fixtures :products
 
   test "Product can not be empty" do
     prod = Product.new
@@ -11,6 +12,14 @@ class ProductTest < ActiveSupport::TestCase
     assert prod.errors[:price].any?
   end
 
+  test "product is not valid without a unique title" do
+    product = Product.new(title: products(:lorem).title,
+                          description: "yyy",
+                          price: 1,
+                          image_url: "lorem.jpg")
+    assert product.invalid?
+    assert_equal [I18n.translate('errors.messages.taken')], product.errors[:title]
+  end
 
   test "product price must be positive" do
     product = Product.new(title: "My Book Title", description: "yyy", image_url: "zzz.jpg")

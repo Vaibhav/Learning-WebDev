@@ -11,3 +11,9 @@ two:
   description: MyText
   image_url: MyString
   price: 9.99
+
+lorem:
+  title: Programming Ruby 1.9
+  description: If you need to get working programs delivered fast, you should add Ruby to your toolbox.
+  price: 19.50
+  image_url: test.jpg
