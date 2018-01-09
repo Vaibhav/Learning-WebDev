@@ -1,20 +1,20 @@
 ## SOLID Ruby
 
-Single Responsibility Principle
+1. Single Responsibility Principle
     * A class should have one, and only one, reason to change.
 
-Open/Closed Principle
+2. Open/Closed Principle
     * You should be able to extend a classes behavior, without modifying it.
         - Prefer subclassing or wrapping over reopening classes 
 
-Liskov Substitution Principle
+3. Liskov Substitution Principle
     * Derived classes must be substitutable for their base classes.
         - If it walks like a duck, quacks like a duck, treat it like a duck
 
-Interface Segregation Principle
+4. Interface Segregation Principle
     * Make fine grained interfaces that are client specific.
 
-Dependency Inversion Principle
+5. Dependency Inversion Principle
     * Depend on abstractions, not on concretions.
     
 
@@ -107,6 +107,40 @@ Entity:
     - decoupled from db 
 
 
+---
+## Get a Whiff of This 
 
+* __code smell__ is a surface indication that usually corresponds to a deeper problem in the system
 
-## Clean Architecture & Design 
+### Code Smells 
+
+1. Bloaters
+* Long Method
+* Large Class
+* Data Clumps
+* Long Parameter List
+* Primitive Obsession
+
+2. Abusers
+* Switch Statements 
+* Refused Bequest - inheritance problem, subclass overrides superclass's inherited method and says i do not implement this method.  
+* Alternative Classes w/ Diff Interfaces
+* Temporary Field
+
+3. Change Preventers
+* Divergent Change
+* Shotgun Surgery
+* Parallel Inheritance Hierarchies 
+
+4. Dispensibles
+* Lazy Class
+* Speculative Generality 
+* Data Class
+* Duplicated Code 
+
+5. Couplers
+* Feature Envy
+* Innappropriate Intimacy 
+* Message Chains 
+* Middle Man
+
