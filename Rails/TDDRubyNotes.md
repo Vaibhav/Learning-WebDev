@@ -1,8 +1,4 @@
-# SOLID Ruby
-
-https://www.youtube.com/watch?v=dKRbsE061u4 
-
-## Notes
+## SOLID Ruby
 
 Single Responsibility Principle
     * A class should have one, and only one, reason to change.
@@ -97,7 +93,18 @@ Testable code is modular, decoupled design, methods of limited scope.
 
 ## Architecture: The Lost Years
 
-Use Case and User Story is the same thing. 
+Use Case and User Story is almost the same thing. 
+User Story becomes a use case. 
+
+
+Interactors:
+    - has application specific business rules. 
+    - Cannot be in a framework. 
+    - decoupled from db
+
+Entity:
+    - App independent business rules     
+    - decoupled from db 
 
 
 
