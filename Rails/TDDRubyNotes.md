@@ -92,3 +92,5 @@ TDD Provides:
 * __Encourages design of testable code__
 
 
+Testable code is modular, decoupled design, methods of limited scope. 
+
