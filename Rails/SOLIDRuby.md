@@ -22,7 +22,7 @@ Dependency Inversion Principle
     * Depend on abstractions, not on concretions.
     
 
-
+---
 ## Magic Tricks of Testing 
 
 Unit Tests Goals
@@ -43,5 +43,52 @@ Unit Tests Goals
     - Return nothing (side effect), change something
 
 ```ruby 
+class Test < MiniTest::Unit::TestCase
 
+    def test_calculation
+        obj = newObj.new(26, 1.5)
+
+        assert_in_delta(29, obj.prop1, 0.01) # within 0.01 of 29 
+    end
+end
 ```
+
+Test **incoming query messages** by making assertions about **what they send back**
+
+
+**Do not test private methods**
+- Lots of exceptions ^^
+
+Do not test outgoing query messages
+
+---
+## Test Driven Development
+
+Software Process:
+* Architecture
+* Conventions & Standards
+* Version Control
+* Agile 
+* TDD 
+
+
+Tests Provide:
+* Documentation of Code 
+* Catch future erros 
+* Save time / costs 
+
+
+TDD:
+* Decide what the code will do 
+* Write a test will pass if the code does that thing 
+* Run the test, see it fail 
+* Write the code 
+* Run the test, see it pass 
+
+TDD Provides:
+* Design and plan before you code 
+* Document your design
+* Proof that code implements design
+* __Encourages design of testable code__
+
+
