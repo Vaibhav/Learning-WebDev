@@ -97,3 +97,9 @@ Testable code is modular, decoupled design, methods of limited scope.
 
 ## Architecture: The Lost Years
 
+Use Case and User Story is the same thing. 
+
+
+
+
+## Clean Architecture & Design 
