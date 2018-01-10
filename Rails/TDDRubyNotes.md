@@ -91,6 +91,9 @@ TDD Provides:
 Testable code is modular, decoupled design, methods of limited scope. 
 
 
+As tests become more specific, the code must become more generic. 
+
+
 ## Architecture: The Lost Years
 
 Use Case and User Story is almost the same thing. 
@@ -187,5 +190,13 @@ to_a # converts to arrays
 array.max
 array.sort 
 
+string.include? "<string>"# tests if string contains given string 
+
+books = {} # dictionary
+books.keys 
+books.values
+
+:splendid # Ruby symbol, cheaper than strings, 
 
 ```
+
