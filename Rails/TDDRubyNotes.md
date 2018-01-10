@@ -201,7 +201,8 @@ books.values
 5.times { print "Odelay!" } # is equivalent to, but rins the block of code 5 times.
 print "Odelay!"*5 
 
-
+if !(cond) # is equal to 
+unless (cond)
 
 
 ```
