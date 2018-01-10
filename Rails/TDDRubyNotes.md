@@ -198,5 +198,11 @@ books.values
 
 :splendid # Ruby symbol, cheaper than strings, 
 
+5.times { print "Odelay!" } # is equivalent to, but rins the block of code 5 times.
+print "Odelay!"*5 
+
+
+
+
 ```
 
