@@ -97,12 +97,12 @@ Use Case and User Story is almost the same thing.
 User Story becomes a use case. 
 
 
-Interactors:
+* Interactors:
     - has application specific business rules. 
     - Cannot be in a framework. 
     - decoupled from db
 
-Entity:
+* Entity:
     - App independent business rules     
     - decoupled from db 
 
@@ -144,3 +144,48 @@ Entity:
 * Message Chains 
 * Middle Man
 
+## Agile 
+
+|   Event	|   Timebox	|
+|---	|---	|
+|   Standup	|   15m	|
+|   Sprint Planning	|   4h	|
+|   Backlog Grooming	|   2h	|
+|   Sprint Review	|   30m	|
+|   Retrospective	|   60m	|
+
+* Retrospective
+    1. Setting the Stage
+    2. Gather Data
+    3. Generate Insights
+    4. Decide What To Do
+    5. Closing the Retrospective
+
+
+* INDEPENDENT
+    - Does this story have dependencies? We should be able to release it independent from other stories.
+* NEGOTIABLE
+    - A story card is a placeholder for a conversation, scope is up for negotiation between the business and the team
+* VALUABLE 
+    - The story should have demonstrated business value to the organization whether it be reduction of tech debt or features that will get new customers or keep existing customers.
+* ESTIMATABLE
+    - We must know enough about the story to estimate it, otherwise it needs to be broken down or a 'spike' needs to be done to learn more
+* SIZED RIGHT
+    - A story must fit within the Sprint timebox otherwise it must be broken down.
+* TESTABLE	
+    - We must understand what 'done' is and the story's acceptance criteria must be unambiguous
+# Ruby
+
+```ruby
+
+integer.to_s # converts to string 
+string.reverse 
+
+to_i # converts to integers
+to_a # converts to arrays
+
+array.max
+array.sort 
+
+
+```
