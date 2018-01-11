@@ -6,18 +6,14 @@
 <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
 <script type="text/babel">
 const rootElement = document.getElementById('root')
-// const element = React.createElement('div', {
-//   className: 'container',
-//   children: 'Hello World',
-// })
-const content = 'Hello World'
-const myClassName = 'container'
-const props = {
-  className: 'container',
-  children: 'Hello World',
-}
-const element = <div {...props} />
+const Message = props => <div>{props.children}</div>
+const element = (
+  <div className="container">
+    <Message>
+      Hello World
+      <Message>Goodbye World</Message>
+    </Message>
+  </div>
+)
 ReactDOM.render(element, rootElement)
 </script>
-
-    JSX with react 
