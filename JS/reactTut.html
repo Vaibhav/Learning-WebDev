@@ -6,7 +6,7 @@
     <script src="https://unpkg.com/prop-types@15.6.0/prop-types.js"></script>
     <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
     <div id="root"></div>
-
+    <div id="root2"></div>
     <script type="text/babel">
     function SayHello(props) {
       return (
@@ -22,8 +22,25 @@
     }
     
     ReactDOM.render(
-      <SayHello firstName={true} />,
+      <SayHello firstName={'Vaibhav'} lastName={'K'} />,
       document.getElementById('root')
     )
-    </script>
-</body>
+
+    const rootElement = document.getElementById('root2')
+    function tick() {
+    const time = new Date().toLocaleTimeString()
+    const element = (
+    <div>
+
+      It is
+      <br />
+      <div children={time} />
+      <br/>
+      <div children={time} />
+    </div>
+  )
+  ReactDOM.render(element, rootElement)
+}
+tick()
+setInterval(tick, 1000)
+</script>
