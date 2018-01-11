@@ -35,6 +35,10 @@ function(args) {
 
 ```javascript
 class CommentBox extends React.Component {
+    
+    constructor() {
+        super(); //must be called in constructor
+    }
     // Every comonent needs a render function 
     // returns a markup 
     render() {
@@ -63,3 +67,21 @@ class CommentBox extends React.Component {
 </html>
 
 ```
+
+
+* HTML elemts writtin in lowercase
+* React components are written in upper camel case 
+* Use **this.props.<propName>** for reading property given in JSX
+
+* in React we use **refs** to reference DOM elements in our code after the component has been rendered.
+
+React Component LifeCycle
+
+```js
+constructor()
+componentWillMount()  //<-- AJAX Requests 
+render()
+componentDidMount() // <-- Continual AJAX Requests 
+componentWillUnmount() // <-- Act as a destrcutor 
+```
+
