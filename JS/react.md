@@ -85,3 +85,9 @@ componentDidMount() // <-- Continual AJAX Requests
 componentWillUnmount() // <-- Act as a destrcutor 
 ```
 
+* Arrow functions in classes bind the method to the instance. ie. __.bind(this)__
+
+
+For deploying a React App
+* CodeSandbox.io
+* Netlify
