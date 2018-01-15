@@ -24,7 +24,41 @@ Examples:
 ### Stuff to Note
 
 * Instance variables are used to pass data from controller to view. 
-* Template filenames that start with an underscore are known as partials, which are intended to be used from within other views.
+* Template filenames that start withs an underscore are known as partials, which are intended to be used from within other views.
 
 
  
+## Rails & React.js
+
+```ruby 
+
+# Add to gem file
+gem 'react-rails'
+
+$ bundle 
+$ rails g react:install
+
+# The react:install generator will automatically include the react JavaScript library in your asset pipeline
+
+```
+
+To create a component:
+
+```ruby
+#app/views/site/index.html.erb
+<%= react_component 'Main' % >
+
+
+## app/assets/javascripts/components/_main.js.jsx
+
+var Main = React.createClass({ 
+    render() { 
+        return ( 
+        <div> 
+            <h1>Hello, World!</h1> 
+        </div> 
+        ) 
+   } 
+});
+
+```

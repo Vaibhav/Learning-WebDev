@@ -221,6 +221,14 @@ end
 # I am rescued.  
 # I am after the begin block.
 
+
+=begin
+My 
+multiline
+comment
+here
+=end
+
 ```
 
 
