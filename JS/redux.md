@@ -1,4 +1,4 @@
-## Redux
+# Redux
 
 * Every change to the app including the data and UI, is contained in a single object, the **state tree** 
 * The State Tree is immutable
@@ -18,8 +18,7 @@ Impure Functions
 
 
 Redux takes the previous state, dispatching action and return the next state. It is important that it does not modify the previous state. Function to calculate the next state must be pure. This function is called the **reducer**.
-
-* 
+ 
 
 ```jsx
 
@@ -72,7 +71,7 @@ function displayInPreview(string) {
 ```
 
 
-### Redux Store Methods
+## Redux Store Methods
 
 ```js
 
@@ -104,5 +103,60 @@ document.addEventListener('click', () => {
 
 ```
 
+## Implementation of a Store from Scratch 
 
+
+```js
+
+// Our Reducer
+const counter = (state = 0, action) => {
+  switch (action.type) {
+    case 'INCREMENT':
+      return state + 1;
+    case 'DECREMENT':
+      return state - 1;
+    default: 
+      return state;
+  }
+}
+
+// Store creation from scratch 
+const createStore = (reducer) => {
+  let state;
+  let listeners = [];
+  
+  const getState = () => state;
+  
+  const dispatch = (action) => {
+    state = reducer(state, action);
+    listeners.forEach(listener => listener());
+  };
+  
+  const subscribe = (listener) => {
+    listeners.push(listener);
+    return () => {
+      listeners = listeners.filter(l => l !== listener);
+    };
+  };
+  
+  dispatch({});
+  
+  return { getState, dispatch, subscribe };
+};
+
+const store = createStore(counter);
+
+// for html view
+const render = () => {
+  document.body.innerText = store.getState();
+};
+
+store.subscribe(render);
+render();
+
+document.addEventListener('click', () => {
+  store.dispatch({ type: 'INCREMENT' });
+});
+
+```
 
