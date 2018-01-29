@@ -62,3 +62,10 @@ var Main = React.createClass({
 });
 
 ```
+
+
+## Rails Testing tips
+
+* element vs elements
+    - element returns the first object it finds
+    - elements returns an array of all the objects it finds 
