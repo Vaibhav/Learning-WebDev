@@ -8,6 +8,11 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 alias ls='ls -GFh'
 alias ll='ls -l'
 
+
+parse_git_branch() {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
 function prompt {
   local BLACK="\[\033[0;30m\]"
   local BLACKBOLD="\[\033[1;30m\]"
@@ -27,7 +32,7 @@ function prompt {
   local WHITEBOLD="\[\033[1;37m\]"
   local RESETCOLOR="\[\e[00m\]"
 
-  export PS1="\n$RED\u $PURPLE@ $GREEN\w $RESETCOLOR$GREENBOLD\$(git branch 2> /dev/null)\n $BLUE[\#] → $RESETCOLOR"
+  export PS1="\n$RED\u $PURPLE@ $GREEN\w $RESETCOLOR$GREENBOLD\$(parse_git_branch)\n $BLUE[\#] → $RESETCOLOR"
   export PS2=" | → $RESETCOLOR"
 }
 
