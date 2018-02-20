@@ -160,4 +160,17 @@ document.addEventListener('click', () => {
 
 ```
 
-Start Video #13 
+# State Methods
+```js
+state.get('');
+state.getIn([]);
+state.delete();
+state.deleteIn(); 
+state.update();
+state.updateIn();
+state.set()
+state.setIn();
+
+state.merge()
+```
+ 
