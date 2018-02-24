@@ -62,7 +62,17 @@ var Main = React.createClass({
 });
 
 ```
+### TRC Rails 
+```ruby 
+rails new . 
+rake db:create
+rails g migration <migration name> 
+# go to db/migrate/<date>_<migration name>.rb and add fields to table 
+# ex. t.string :p1, t.string :p2
+rails g controller <controller name> 
+rails g model <model name> 
 
+```
 
 ## Rails Testing tips
 
