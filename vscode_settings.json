@@ -1,0 +1,24 @@
+{
+    "gitlens.advanced.messages": {
+        "suppressCommitHasNoPreviousCommitWarning": false,
+        "suppressCommitNotFoundWarning": false,
+        "suppressFileNotUnderSourceControlWarning": false,
+        "suppressGitVersionWarning": false,
+        "suppressLineUncommittedWarning": false,
+        "suppressNoRepositoryWarning": false,
+        "suppressUpdateNotice": false,
+        "suppressWelcomeNotice": true
+    },
+    "workbench.colorTheme": "Atom One Dark",
+    "git.autofetch": true,
+    "editor.tabSize": 2,
+    "gitlens.codeLens.scopes": [
+        "containers",
+        "document"
+    ],
+    "editor.minimap.enabled": false,
+    "editor.rulers": [
+        120
+    ],
+    "gitlens.keymap": "alternate"
+}
