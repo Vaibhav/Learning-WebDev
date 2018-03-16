@@ -85,6 +85,17 @@ componentDidMount() // <-- Continual AJAX Requests
 componentWillUnmount() // <-- Act as a destrcutor 
 ```
 
+```js
+// Another way to create a component 
+
+export default function component(props) {
+
+    return (<div> Hi </div>); 
+
+}
+
+```
+
 * Arrow functions in classes bind the method to the instance. ie. __.bind(this)__
 
 
