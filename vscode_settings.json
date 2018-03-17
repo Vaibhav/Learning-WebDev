@@ -10,7 +10,6 @@
         "suppressWelcomeNotice": true
     },
     "workbench.colorTheme": "Atom One Dark",
-    "git.autofetch": true,
     "editor.tabSize": 2,
     "gitlens.codeLens.scopes": [
         "containers",
@@ -20,5 +19,6 @@
     "editor.rulers": [
         120
     ],
-    "gitlens.keymap": "alternate"
+    "gitlens.keymap": "alternate",
+    "editor.fontFamily": "'Hack', 'Courier New', monospace"
 }
