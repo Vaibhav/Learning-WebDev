@@ -1,3 +1,5 @@
+# Security 
+### Easy way to prevent/check for vulnerable packages
 
 ```
 // check all packages for upgrades -> prevent security vulnerabilities
