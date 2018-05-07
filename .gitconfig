@@ -1,0 +1,7 @@
+[color]
+    ui = auto
+[core]
+    editor = vim
+    autocrlf = false
+[push]
+    default = tracking
